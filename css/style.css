@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.total-window {
+    width: 90%;
+    margin: 50px;
+}
+
+.contacts-window {
+    width: 40%;
+    background-color: lightgray;
+}
+
+
+.user-info img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.notifiche {
+    background-color: lightblue;
+}
+
+.search-bar input {
+    width: 100%;
+}
