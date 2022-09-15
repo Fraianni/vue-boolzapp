@@ -7,7 +7,8 @@
 
 .total-window {
     width: 90%;
-    margin: 50px;
+    margin: 0px 20px;
+    height: 90vh;
 }
 
 .contacts-window {
@@ -27,4 +28,30 @@
 
 .search-bar input {
     width: 100%;
+}
+
+.contact {
+    border: 1px solid black;
+}
+
+.contact-img {
+    width: 20%;
+}
+
+.active_contact {
+    background-color: lightgray;
+}
+
+.no_active_contact {
+    background-color: white;
+}
+
+.contacts {
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.contacts img {
+    width: 100%;
+    border-radius: 50%;
 }

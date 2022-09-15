@@ -17,6 +17,7 @@
 <body>
 
     <div id="app">
+
         <div class="total-window">
             <div class="contacts-window d-flex flex-column ">
                 <div class="user d-flex align-items-center  ">
@@ -38,12 +39,18 @@
                     <input type="text" placeholder="Cerca o inizia nuova chat">
                 </div>
                 <div class="contacts">
-                    <div v-for="object in contacts" class="contact d-flex justify-content-between">
-                        <div class="contact-info d-flex ">
+                    <div @click="clickedContact(index)" v-for="(object, index) in contacts"
+                        class="contact d-flex justify-content-between">
+                        <div class="contact-info d-flex "
+                            :class="object.clicked===true? 'active_contact' : 'no_active_contact' ">
                             <div class="contact-img">
-                                <img src="img/avatar.jpg" alt="">
+                                <img :src="'img/avatar' + object.avatar + '.jpg'" alt="">
+
                             </div>
-                            <div class="contact-name d-flex flex-column"></div>
+                            <div class="contact-name d-flex flex-column">
+                                <p>{{object.name}}</p>
+                                <p>{{object.messages[1].message}}</p>
+                            </div>
                         </div>
 
                         <div class="hour"></div>

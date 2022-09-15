@@ -4,6 +4,7 @@ const app = new Vue({
     data: {
         contacts: [
             {
+                clicked: false,
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
@@ -26,6 +27,7 @@ const app = new Vue({
                 ],
             },
             {
+                clicked: false,
                 name: 'Fabio',
                 avatar: '_2',
                 visible: true,
@@ -48,6 +50,7 @@ const app = new Vue({
                 ],
             },
             {
+                clicked: false,
                 name: 'Samuele',
                 avatar: '_3',
                 visible: true,
@@ -70,6 +73,7 @@ const app = new Vue({
                 ],
             },
             {
+                clicked: false,
                 name: 'Alessandro B.',
                 avatar: '_4',
                 visible: true,
@@ -87,6 +91,7 @@ const app = new Vue({
                 ],
             },
             {
+                clicked: false,
                 name: 'Alessandro L.',
                 avatar: '_5',
                 visible: true,
@@ -104,6 +109,7 @@ const app = new Vue({
                 ],
             },
             {
+                clicked: false,
                 name: 'Claudia',
                 avatar: '_6',
                 visible: true,
@@ -126,6 +132,7 @@ const app = new Vue({
                 ],
             },
             {
+                clicked: false,
                 name: 'Federico',
                 avatar: '_7',
                 visible: true,
@@ -143,6 +150,7 @@ const app = new Vue({
                 ],
             },
             {
+                clicked: false,
                 name: 'Davide',
                 avatar: '_8',
                 visible: true,
@@ -169,6 +177,9 @@ const app = new Vue({
 
 
     methods: {
+        clickedContact(index) {
+            this.contacts[index].clicked = !this.contacts[index].clicked;
+        }
 
     }
 });
