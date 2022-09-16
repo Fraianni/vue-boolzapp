@@ -5,7 +5,7 @@ const app = new Vue({
         activeChat: -1,
         contacts: [
             {
-                clicked: false,
+                last: 2,
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
@@ -28,6 +28,7 @@ const app = new Vue({
                 ],
             },
             {
+                last: 2,
                 name: 'Fabio',
                 avatar: '_2',
                 visible: true,
@@ -50,7 +51,7 @@ const app = new Vue({
                 ],
             },
             {
-                clicked: false,
+                last: 2,
                 name: 'Samuele',
                 avatar: '_3',
                 visible: true,
@@ -73,7 +74,7 @@ const app = new Vue({
                 ],
             },
             {
-                clicked: false,
+                last: 1,
                 name: 'Alessandro B.',
                 avatar: '_4',
                 visible: true,
@@ -91,7 +92,7 @@ const app = new Vue({
                 ],
             },
             {
-                clicked: false,
+                last: 1,
                 name: 'Alessandro L.',
                 avatar: '_5',
                 visible: true,
@@ -109,7 +110,7 @@ const app = new Vue({
                 ],
             },
             {
-                clicked: false,
+                last: 2,
                 name: 'Claudia',
                 avatar: '_6',
                 visible: true,
@@ -132,7 +133,7 @@ const app = new Vue({
                 ],
             },
             {
-                clicked: false,
+                last: 1,
                 name: 'Federico',
                 avatar: '_7',
                 visible: true,
@@ -150,7 +151,7 @@ const app = new Vue({
                 ],
             },
             {
-                clicked: false,
+                last: 2,
                 name: 'Davide',
                 avatar: '_8',
                 visible: true,

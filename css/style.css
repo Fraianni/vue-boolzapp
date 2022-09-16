@@ -5,6 +5,10 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    overflow-y: hidden;
+}
+
 .total-window {
     width: 90%;
     margin: 0px 20px;
@@ -49,9 +53,19 @@
 .contacts {
     background-color: white;
     margin-bottom: 5px;
+    overflow-y: scroll;
 }
 
 .contacts img {
     width: 100%;
     border-radius: 50%;
+}
+
+.chat-window {
+    background-color: red;
+    width: 60%;
+}
+
+.last {
+    color: gray;
 }

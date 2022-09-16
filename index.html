@@ -18,7 +18,7 @@
 
     <div id="app">
 
-        <div class="total-window">
+        <div class="total-window d-flex">
             <div class="contacts-window d-flex flex-column ">
                 <div class="user d-flex align-items-center  ">
                     <div class="user-info d-flex align-items-center">
@@ -48,7 +48,7 @@
                             </div>
                             <div class="contact-name d-flex flex-column">
                                 <p>{{object.name}}</p>
-                                <p>{{object.messages[1].message}}</p>
+                                <p class="last">{{object.messages[object.last].message}}</p>
                             </div>
                         </div>
 
@@ -57,7 +57,9 @@
                     </div>
                 </div>
             </div>
-            <div class="chat-window"></div>
+            <div class="chat-window">
+                ciao
+            </div>
         </div>
     </div>
 
