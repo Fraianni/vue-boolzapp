@@ -3,6 +3,7 @@ const app = new Vue({
     el: '#app',
     data: {
         activeChat: 0,
+        new_message: '',
         contacts: [
             {
                 last: 2,
@@ -180,6 +181,17 @@ const app = new Vue({
     methods: {
         clickedContact(index) {
             this.activeChat = index;
+        },
+
+        addMessage(activeChat) {
+            const complete_mex = {
+                data: '12/12/12',
+                status: 'sent',
+                message: this.new_message
+            }
+            this.contacts[activeChat].messages.push(complete_mex);
+            this.new_message = '';
+
         }
 
     }

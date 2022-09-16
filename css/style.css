@@ -96,3 +96,8 @@ body {
     height: 10%;
     background-color: white;
 }
+
+.write-message input {
+    width: 100%;
+    height: 100%;
+}

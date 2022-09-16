@@ -78,7 +78,10 @@
                     </div>
 
                 </div>
-                <div class="write-message"></div>
+                <div class="write-message">
+                    <input type="text" placeholder="Scrivi nuovo messaggio" v-model="new_message"
+                        @keyup.enter="addMessage(activeChat)">
+                </div>
 
             </div>
 
