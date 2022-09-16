@@ -58,8 +58,32 @@
                 </div>
             </div>
             <div class="chat-window">
-                ciao
+                <div class="user d-flex align-items-center  ">
+                    <div class="user-info d-flex align-items-center">
+                        <img :src="'img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
+                        <p>{{contacts[activeChat].name}}</p>
+                    </div>
+                    <div class="user-icons d-flex justify-content-between">
+                        <i class="bi bi-circle"></i>
+                        <i class="bi bi-chat"></i>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+                </div>
+                <div v-for="item in contacts[activeChat].messages" class="messages">
+                    <div v-if="item.status === 'received' " class="received">
+                        <p>{{item.message}}</p>
+                    </div>
+                    <div v-else class="sent">
+                        <p>{{item.message}}</p>
+                    </div>
+
+                </div>
+                <div class="write-message"></div>
+
             </div>
+
+
+
         </div>
     </div>
 

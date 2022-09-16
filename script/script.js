@@ -2,7 +2,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        activeChat: -1,
+        activeChat: 0,
         contacts: [
             {
                 last: 2,
