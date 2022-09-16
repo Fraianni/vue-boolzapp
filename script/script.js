@@ -4,6 +4,7 @@ const app = new Vue({
     data: {
         activeChat: 0,
         new_message: '',
+        searching_chat: '',
         contacts: [
             {
                 last: 2,
@@ -184,14 +185,27 @@ const app = new Vue({
         },
 
         addMessage(activeChat) {
+            const adesso = new Date();
+            console.log(adesso);
             const complete_mex = {
-                data: '12/12/12',
+                data: adesso.getHours() + ":" + adesso.getMinutes(),
                 status: 'sent',
                 message: this.new_message
             }
             this.contacts[activeChat].messages.push(complete_mex);
             this.new_message = '';
 
+        },
+
+        search() {
+
+
+            this.contacts.forEach(element => {
+                if (!(element.name.toLowerCase().includes(this.searching_chat.toLowerCase())))
+                    element.visible = false;
+                else
+                    element.visible = true;
+            });
         }
 
     }

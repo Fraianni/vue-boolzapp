@@ -36,11 +36,11 @@
                     <a href="#">Attiva notifiche desktop</a>
                 </div>
                 <div class="search-bar bg-white">
-                    <input type="text" placeholder="Cerca o inizia nuova chat">
+                    <input type="text" placeholder="Cerca o inizia nuova chat" v-model="searching_chat" @keyup="search">
                 </div>
                 <div class="contacts">
-                    <div v-for="(object, index) in contacts" class="contact d-flex justify-content-between"
-                        @click="clickedContact(index)">
+                    <div v-for="(object, index) in contacts" v-if="object.visible===true"
+                        class="contact d-flex justify-content-between" @click="clickedContact(index)">
                         <div class="contact-info d-flex " :class="{ active_contact: activeChat === index }">
                             <div class="contact-img">
                                 <img :src="'img/avatar' + object.avatar + '.jpg'" alt="">
