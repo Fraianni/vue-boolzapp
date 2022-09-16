@@ -2,6 +2,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        activeChat: -1,
         contacts: [
             {
                 clicked: false,
@@ -27,7 +28,6 @@ const app = new Vue({
                 ],
             },
             {
-                clicked: false,
                 name: 'Fabio',
                 avatar: '_2',
                 visible: true,
@@ -178,7 +178,7 @@ const app = new Vue({
 
     methods: {
         clickedContact(index) {
-            this.contacts[index].clicked = !this.contacts[index].clicked;
+            this.activeChat = index;
         }
 
     }

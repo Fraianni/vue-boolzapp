@@ -39,10 +39,9 @@
                     <input type="text" placeholder="Cerca o inizia nuova chat">
                 </div>
                 <div class="contacts">
-                    <div @click="clickedContact(index)" v-for="(object, index) in contacts"
-                        class="contact d-flex justify-content-between">
-                        <div class="contact-info d-flex "
-                            :class="object.clicked===true? 'active_contact' : 'no_active_contact' ">
+                    <div v-for="(object, index) in contacts" class="contact d-flex justify-content-between"
+                        @click="clickedContact(index)">
+                        <div class="contact-info d-flex " :class="{ active_contact: activeChat === index }">
                             <div class="contact-img">
                                 <img :src="'img/avatar' + object.avatar + '.jpg'" alt="">
 
